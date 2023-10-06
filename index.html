@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title> new Landing Page</title>
+        <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                width:100%;
+                height:100%;
+                background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url("https://wallpaperset.com/w/full/2/4/0/509751.jpg");
+                background-size: cover;
+                font-family: sans-serif;
+            }
+            nav{
+                height: 100px;
+                width:100%;
+                color:white;
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .logo{
+                font-size: 30px;
+                color:orange;
+                transition: 2s;
+            }
+            .logo:hover{
+                color:white;
+                background-color:orange;
+                padding:10px 20px;
+                border-radius:10px;
+                transition: 1s;
+            }
+            .menu a{
+                text-decoration: none;
+                color:white;
+                padding:10px 20px;
+                font-size: 20px;
+                position: relative;
+            }
+            .menu a:hover{
+                color:orange;
+                transition: 0.6s;
+            }
+            .menu a:before{
+                content:'';
+                position: absolute;
+                top:0;
+                left:0;
+                width:0%;
+                height:100%;
+                border-bottom:2px solid rgb(255, 255, 255);
+                transition: 0.6s linear;
+                
+            }
+            .menu a:hover:before{
+                width:90%;
+            }
+            .text{
+                color:white;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+            }
+            .text p{
+                letter-spacing: 5px;
+                font-size:20px ;
+                margin-top: 5%;
+                color: white;
+            }
+            .text h1{
+                font-size: 50px;
+                color:orange;
+            }
+            .text a{
+                text-decoration: none;
+                background-color:darkblue ;
+                color:white;
+                font-size:20px ;
+                padding:10px 20px;
+                transition: 0.5s;
+                border-radius: 10px;
+            }
+            .text a:hover{
+                border:  2px solid rgb(255, 255, 255);
+                padding:15px 25px;
+                background-color: white;
+                color:darkblue
+            }
+            span{
+                font-size: 20;
+                display: none; 
+                color:white;
+            }
+            @media only screen and (max-width:700px){
+                span{ 
+                    display:block ; 
+                    margin-top: 90%;          
+                }
+                ul a{
+                    display: block;
+                
+                }
+                ul{
+                    display:none;
+                }
+                .menu a:before{
+                content:'';
+                position: absolute;
+                top:0;
+                left:0;
+                width:0%;
+                height:100%;
+                transition: 0.6s linear;
+            }
+            .menu a:hover:before{
+                width:0%;
+            }
+            }
+        </style>
+    </head>
+    
+    
+    <body>
+        <header>
+            <nav>
+              <div class="logo">Travel Over</div>
+              <div class="menu">
+                <span onclick="myfunction()">&#9776;</span>
+                <ul id="menuset"> 
+                    <a href="#">Home</a>
+                    <a href="#">Offer's</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </ul>
+              </div>
+              
+            </nav>
+            <section class="text">
+                <h1>Let's Travel Together</h1>
+                <p>Explore The World</p><br><br><br>
+                <a href="#">Book Your Trip</a>
+            </section>
+        </header>
+        <script>
+            function myfunction(){
+                var x=document.getElementById("menuset");
+            
+                 if(x.style.display=="block")
+                 {
+                    x.style.display="none";
+                 }
+                 else{
+                   x.style.display="block";
+                 }
+                 
+            }
+        
+        </script>
+    </body>
+</html>
